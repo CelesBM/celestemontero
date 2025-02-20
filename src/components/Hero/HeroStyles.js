@@ -2,7 +2,6 @@ import styled, {keyframes} from "styled-components";
 import heroimg from "../../../public/hero.png";
 
 /* Animación para saludo */
-
 export const helloAnimation = keyframes`
   0% {
     transform: rotate(10deg);
@@ -12,6 +11,19 @@ export const helloAnimation = keyframes`
   }
   100% {
     transform: rotate(10deg); /* Regresa a la posición inicial */
+  }
+`;
+
+/* Animación para flecha */
+const moveDown = keyframes`
+  0% {
+    transform: translateY(0);  
+  }
+  50% {
+    transform: translateY(10px);  /* Movimiento 10px hacia abajo */
+  }
+  100% {
+    transform: translateY(0);  /* Regresa a la posición inicial */
   }
 `;
 
@@ -98,9 +110,8 @@ export const Container = styled.section`
 
     @media(min-width: 1850px){
     padding: 20px 400px;
-  }
-  
-`;
+  }`
+;
 
 export const HelloContainer = styled.div`
   display: flex;
@@ -230,3 +241,30 @@ export const CurriculumContainer = styled.div`
     }
   }
 `;
+
+export const Arrow = styled.div`
+  margin-top: 0px;
+  display: inline-block;
+  font-size: 40px;
+  animation: ${moveDown} 1.4s infinite;  // Aplica la animación continua hacia abajo
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(117,87,210,1) 56%, rgba(199,81,146,1) 89%); 
+  -webkit-background-clip: text; 
+  color: transparent; 
+  transition: color 0.3s ease; 
+   
+  &:hover {
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(117,87,210,1) 25%, rgba(199,81,146,1) 38%, rgba(199,169,81,1) 56%);
+    -webkit-background-clip: text;  
+    color: transparent; 
+  }
+
+   @media(min-width: 600px){
+    font-size: 50px;
+  }
+  
+    @media(min-width: 1400px){
+    font-size: 60px;
+  }
+`;
+

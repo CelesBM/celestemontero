@@ -1,4 +1,4 @@
-import { Container, HelloContainer, SocialMediaContainer, CurriculumContainer} from "./HeroStyles"
+import { Container, HelloContainer, SocialMediaContainer, CurriculumContainer, Arrow} from "./HeroStyles"
 
 const Hero = ()=> {
 
@@ -18,6 +18,10 @@ const Hero = ()=> {
             <CurriculumContainer>
                 <button>Descargar CV</button>
             </CurriculumContainer>
+            <a href="#projects">
+                <Arrow>{'︾'}</Arrow>
+            </a>    
+           
         </Container>
         </>
     )

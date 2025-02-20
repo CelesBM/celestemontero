@@ -11,4 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
   }
 
+  html {
+  scroll-behavior: smooth; /* Aplica el desplazamiento suave */
+  }
 `;

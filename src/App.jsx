@@ -1,5 +1,6 @@
 import { GlobalStyles } from './GlobalStyles/GlobalStyles'
 import Hero from './components/Hero/Hero'
+import Projects from './components/Projects/Projects'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
 
   
       <Hero/>
+      <Projects/>
       <GlobalStyles/>
     
     </>

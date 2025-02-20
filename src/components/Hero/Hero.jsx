@@ -7,7 +7,7 @@ const Hero = ()=> {
         <Container>
             <HelloContainer>
                 <h2>Hola, soy Celeste </h2>
-                <img src="https://cdn.creazilla.com/emojis/49427/waving-hand-emoji-clipart-lg.png" alt="hand"/>
+                <img src="/hand.png" alt="hand"/>
             </HelloContainer>
             <h1>Fullstack Developer</h1>
             <p>Mi objetivo es crear experiencias que generen valor para los usuarios y las empresas, aplicando siempre las mejores prácticas de desarrollo y diseño. </p>

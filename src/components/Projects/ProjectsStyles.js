@@ -58,6 +58,10 @@ export const ProyectosContainer = styled.div`
 `;
 
 export const ProyectoCard = styled.div`
+  background-color:rgb(51, 54, 58);
+  border: 2px solid transparent; /* Inicialmente sin borde */
+  border-radius: 2rem;
+  transition: box-shadow 0.6s ease; /* Cambiar box-shadow en lugar de background */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,14 +70,106 @@ export const ProyectoCard = styled.div`
   gap: 15px;
   padding: 20px;
   color: white;
+  position: relative; /* Posiciono "ir al sitio" en la img */
+  box-shadow: 0 0 8px 2px rgba(246,242,54,0.3), 0 0 12px 4px rgba(252,70,107,0.3), 0 0 10px 6px rgba(63,94,251,0.3);  
+}
 
-  & h5{ /*ver de hacerlo dentro de la imagen*/
-  font-size: 20px;
+  & h5 {  
+  font-size: 22px;
+  }
+
+  .img-container {
+   position: relative; /* Necesario para posicionar el texto "Ir al sitio" sobre la imagen */
+  }
+
+  & img{
+  width: 250px;
+  height: auto;
+  border-radius: 0.5rem;
+  cursor:pointer;
+  transition: filter 0.3s ease;
+  position: relative;
+  }
+
+  & img:hover{
+   filter: grayscale(100%);
+  }
+
+  .site-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 1.5rem;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(117,87,210,1) 56%, rgba(198,77,148,1) 79%, rgba(199,81,146,1) 89%);  
+    font-size: 18px;
+    opacity: 0; /* Inicialmente oculto */
+    pointer-events: none; /* No interactuable */
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+
+  .img-container:hover .site-text {
+    opacity: 1; /* Aparece el texto al hacer hover */
   }
 
   & p{
   font-size: 16px;
   line-height: 1.4;
-  text-align: center;
+  text-align: justify;
   }
+
+    /* Estilo para la descripción oculta */
+  .description {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .description.show {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    max-height: 1000px; 
+  }
+
+  /* Estilos para la flecha "Ver más" */
+  .toggle-description {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  .toggle-description:hover {
+    color:rgb(174, 170, 238);
+  }
+`;
+
+export const SkillsContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+align-items: center;
+gap: 7px;
+
+
+& span{
+font-size: 15px;
+background-color:rgb(82, 86, 90);
+padding: 2px 10px;
+border-radius: 1rem;
+}
 `;

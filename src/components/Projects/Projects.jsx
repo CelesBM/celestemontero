@@ -1,5 +1,11 @@
-import { Container, Presentation, ProyectosContainer, ProyectoCard } from "./ProjectsStyles"
+import { Container, Presentation, ProyectosContainer, ProyectoCard, SkillsContainer } from "./ProjectsStyles"
+import { useState } from "react"
 const Projects = ()=> {
+    const [showDescription, setShowDescription] = useState(false);
+
+    const toggleDescription = ()=> {
+        setShowDescription(prevState => !prevState)
+    }
 
     return(
         <>
@@ -11,10 +17,18 @@ const Projects = ()=> {
             <ProyectosContainer>
                 <ProyectoCard>
                     <h5>Pet Finder</h5>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png" alt="" />
+                    <div className="img-container">
+                        <img src="/pet-finder.png" alt="" />
+                        <div className="site-text">Ir al sitio</div> {/* Texto "Ir al sitio" */}
+                    </div>
                     <p>12/24 - 02/25</p>
-                    <p>He desarrollado una aplicación para ayudar a encontrar mascotas perdidas rápidamente. Los usuarios pueden registrarse de forma segura, crear reportes con detalles como nombre, imagen (almacenada en Cloudinary) y ubicación en un mapa. Utilizando Nominatim, los reportes se muestran en un radio de 20 km, y se pueden hacer avistamientos con notificaciones por correo. La gestión de reportes es accesible desde el perfil de cada usuario. La aplicación utiliza PostgreSQL, Sequelize, Express.js, TypeScript, Custom Elements, Cloudinary y Leaflet para ofrecer una experiencia eficiente y fácil de usar.</p>
-                    <p>Skills: PostgreSQL Sequelize Express.js TypeScript. Custom Elements. Cloudinary Nominatim y Leaflet </p>
+                    <SkillsContainer>
+                        <span>PostgreSQL</span><span>Sequelize</span><span>Express.js</span><span>TypeScript</span><span>Custom Elements</span><span>Cloudinary</span><span>Nominatim</span>
+                    </SkillsContainer> 
+                    <p className={`description ${showDescription ? 'show' : ''}`}>He desarrollado una aplicación para ayudar a encontrar mascotas perdidas rápidamente. Los usuarios pueden registrarse de forma segura, crear reportes con detalles como nombre, imagen (almacenada en Cloudinary) y ubicación en un mapa. Utilizando Nominatim, los reportes se muestran en un radio de 20 km, y se pueden hacer avistamientos con notificaciones por correo. La gestión de reportes es accesible desde el perfil de cada usuario. La aplicación utiliza PostgreSQL, Sequelize, Express.js, TypeScript, Custom Elements, Cloudinary y Leaflet para ofrecer una experiencia eficiente y fácil de usar.</p>
+                    <div onClick={toggleDescription} className="toggle-description">
+                        <span>{showDescription ? '︿' : '﹀'}</span> {showDescription ? 'Ver menos' : 'Ver más'}
+                    </div>
                 </ProyectoCard>
                 <ProyectoCard>
                     <h5>E-commerce backend</h5>

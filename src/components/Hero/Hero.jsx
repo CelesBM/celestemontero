@@ -21,7 +21,6 @@ const Hero = ()=> {
             <a href="#projects">
                 <Arrow>{'︾'}</Arrow>
             </a>    
-           
         </Container>
         </>
     )

@@ -107,8 +107,56 @@ align-items: center;
 gap: 20px; 
 margin-top: 20px;
 
+@media(min-width: 1075px){
+flex-direction: row;
+flex-wrap: nowrap;
+gap: 100px;
+}
+
 & img {
 border-radius: 50rem;
 width: 250px;
+}
+
+@media(min-width: 1075px){
+& img {
+width: 300px;
+}
+}
+
+& p {
+color: white;
+font-size: 18px;
+line-height: 1.4;
+text-align: justify;
+}
+
+@media(min-width: 800px){
+& p {
+font-size: 20px;
+}
+}
+
+@media(min-width: 1075px){
+& p {
+width: 60%;
+padding-left: 50px;
+border-left: solid 3px rgb(68, 73, 97);
+}
+}
+
+& span{
+font-size: 19px;
+font-weight: bold;
+background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(117,87,210,1) 56%, rgba(199,81,146,1) 89%);
+-webkit-background-clip: text; /* Aplica el gradiente al texto */
+color: transparent; /* Hace que el texto sea transparente para que solo se vea el gradiente */
+-webkit-text-stroke: 0.1px white; /* Aplica el borde negro alrededor del texto */
+}
+
+@media(min-width: 800px){
+& span {
+font-size: 21px;
+}
 }
 `;

@@ -89,8 +89,26 @@ align-content: center;
 align-items: center;
 gap: 20px; 
 margin-top: 20px;
+
+ @media(min-width: 505px){
+  margin-top: 40px;
+  gap: 35px; 
+  }
+
 & img {
 border-radius: 5px;
 width: 60px;
 }
+
+  @media(min-width: 800px){
+  & img {
+  width: 80px;
+}
+  }
+
+  @media(min-width: 800px){
+  & p {
+  font-size: 20px;
+}
+  }
 `;

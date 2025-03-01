@@ -9,6 +9,19 @@ export const textGlow = keyframes`
   }
 `;
 
+const fadeInOut = keyframes`
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+    
+`;
+
 export const Container = styled.section`;
   background-color:rgb(41, 44, 48);
   display: flex;
@@ -113,7 +126,22 @@ margin-top: 20px;
 & img {
 border-radius: 5px;
 width: 60px;
+ opacity: 0; /* Inicialmente las imágenes están ocultas */
+    animation: ${fadeInOut} 15s ease-in-out infinite;
 }
+
+/* Animación para las imágenes en 3 grupos */
+  & img:nth-child(1) { animation-delay: 0s; }
+  & img:nth-child(2) { animation-delay: 1s; }
+  & img:nth-child(3) { animation-delay: 2s; }
+  & img:nth-child(4){ animation-delay: 3s; }
+  & img:nth-child(5){ animation-delay: 4s; }
+  & img:nth-child(6) { animation-delay: 5s; }
+  & img:nth-child(7){ animation-delay: 6s; }
+  & img:nth-child(8){ animation-delay: 7s; }
+  & img:nth-child(9) { animation-delay: 8s; }
+
+
 
   @media(min-width: 800px){
   & img {

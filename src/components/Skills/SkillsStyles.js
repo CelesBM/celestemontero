@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const textGlow = keyframes`
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+`;
 
 export const Container = styled.section`;
   background-color:rgb(41, 44, 48);
@@ -50,6 +59,12 @@ export const Presentation = styled.div`
   font-size: 25px;
   margin-bottom: 25px;
   position: relative;
+ /* El gradiente de brillo en el texto */
+    background: linear-gradient(90deg, rgba(241, 240, 235, 0.86) 0%, rgba(255, 255, 255, 0.7) 50%, rgb(255, 255, 255) 100%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent; /* El gradiente se aplica solo al texto */
+    animation: ${textGlow} 4s ease-in-out infinite;
 }
 
 @media(min-width: 800px){

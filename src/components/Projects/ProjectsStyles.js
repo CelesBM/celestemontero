@@ -1,4 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const textGlow = keyframes`
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+`;
+
+export const FadeIn = keyframes`
+  0% {
+    opacity: 0;
+   
+  }
+  100% {
+    opacity: 1;
+    
+  }
+`;
+
+
 
 export const Container = styled.section`;
   background-color:rgb(41, 44, 48);
@@ -39,6 +61,12 @@ export const Presentation = styled.div`
   font-size: 25px;
   margin-bottom: 25px;
   position: relative;
+ /* El gradiente de brillo en el texto */
+    background: linear-gradient(90deg, rgba(241, 240, 235, 0.86) 0%, rgba(255, 255, 255, 0.7) 50%, rgb(255, 255, 255) 100%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent; /* El gradiente se aplica solo al texto */
+    animation: ${textGlow} 4s ease-in-out infinite;
 }
 
 @media(min-width: 800px){
@@ -101,6 +129,10 @@ export const ProyectoCard = styled.div`
   position: relative; /* Posiciono "ir al sitio" en la img */
   box-shadow: 0 0 8px 2px rgba(246,242,54,0.3), 0 0 12px 4px rgba(252,70,107,0.3), 0 0 10px 6px rgba(63,94,251,0.3);  
 
+  &:hover{
+  box-shadow: 0 0 12px 4px rgba(246,242,54,0.3), 0 0 12px 4px rgba(252,70,107,0.3), 0 0 10px 10px rgba(63,94,251,0.3);  
+  }
+
     @media(min-width: 800px){
   gap: 20px;
   width: 350px;
@@ -155,6 +187,10 @@ export const ProyectoCard = styled.div`
    filter: grayscale(100%);
   }
 
+  .img-container:hover img {
+  filter: grayscale(100%); /* Mantén la imagen en blanco y negro al hacer hover sobre el contenedor de la imagen */
+}
+
   .site-text {
     position: absolute;
     top: 50%;
@@ -167,7 +203,7 @@ export const ProyectoCard = styled.div`
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(117,87,210,1) 56%, rgba(198,77,148,1) 79%, rgba(199,81,146,1) 89%);  
     font-size: 18px;
     opacity: 0; /* Inicialmente oculto */
-    pointer-events: none; /* No interactuable */
+    pointer-events: auto;
     transition: opacity 0.3s ease;
     z-index: 2;
   }
@@ -203,6 +239,7 @@ export const ProyectoCard = styled.div`
     justify-content: center;
     opacity: 1;
     max-height: 2000px; 
+    animation: ${FadeIn} 2.5s ease-out;
   }
 
   /* Estilos para la flecha "Ver más" */

@@ -11,6 +11,24 @@ export const cursorAnimation = keyframes`
    100% { opacity: 0; }
 `;
 
+export const lightAnimation = keyframes`
+  0% {
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.6), 0 0 2px 1px rgba(255, 255, 255, 0.3);
+  }
+  25% {
+    box-shadow: 2px 0 2px 1px rgba(255, 255, 255, 0.6), 2px 0 2px 1px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 1px 2px 2px 1px rgba(255, 255, 255, 0.6), 2px 2px 2px 1px rgba(255, 255, 255, 0.3);
+  }
+  75% {
+    box-shadow: 0 2px 2px 1px rgba(255, 255, 255, 0.6), 0 2px 2px 1px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: -2px 2px 2px 1px rgba(255, 255, 255, 0.6), -2px 2px 2px 1px rgba(255, 255, 255, 0.3);
+  }
+`;
+
 export const Container = styled.section`;
   background-color:rgb(41, 44, 48);
   display: flex;
@@ -116,6 +134,7 @@ gap: 100px;
 & img {
 border-radius: 50rem;
 width: 250px;
+    animation: ${lightAnimation} 2s infinite linear; /* Animación que crea el efecto de luz alrededor de la imagen */
 }
 
 @media(min-width: 1075px){

@@ -100,6 +100,11 @@ align-items: center;
 & img{
 width: 45px;
 border-radius: 8px;
+transition: transform 0.3s ease-in-out;
+}
+
+& img:hover{
+transform: scale(1.1);
 }
 
   @media(min-width: 800px){

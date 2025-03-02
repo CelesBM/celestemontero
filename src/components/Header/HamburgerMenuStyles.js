@@ -12,48 +12,46 @@ export const slideUp = keyframes`
 `;
 
 export const Container = styled.section`
-cursor: pointer;
-  position: absolute; /* Esto hace que el header se acople al Hero */
+  cursor: pointer;
+  position: absolute; 
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10; /* Asegura que el menú hamburguesa esté por encima del Hero */
-  background-color: transparent; /* Sin fondo */
+  z-index: 10; 
+  background-color: transparent; 
   padding: 15px;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 
   @media(min-width: 768px){
-  display: none;
+    display: none;
   }
 
   & div{
-  color: white;
-  font-size: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 2rem;
-  padding: 5px 12px;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    padding: 5px 12px;
   }
 
    @media(min-width: 500px){
-  & div{
-  font-size: 35px;
-
+    & div{
+    font-size: 35px;
     padding: 5px 15px;
-  }
+    }
   }
 
-     @media(min-width: 600px){
-  & div{
-  font-size: 40px;
+    @media(min-width: 600px){
+      & div{
+      font-size: 40px;
       padding: 5px 16px;
-
-  }
-  }
-  
+      }
+    }
 `;
-// Fondo negro cuando el menú está abierto
+
+
 export const Overlay = styled.div`
   position: fixed;
   top: 0;
@@ -64,7 +62,6 @@ export const Overlay = styled.div`
   z-index: 1;
 `;
 
-// Menú que aparece cuando está abierto
 export const Menu = styled.div`
   position: fixed;
   top: 0;
@@ -88,33 +85,32 @@ export const Menu = styled.div`
   }
 
   li {
-  cursor: pointer;
+    cursor: pointer;
     margin: 20px 0;
     animation: ${slideUp} 0.7s ease-out forwards; 
   }
 
   .hero, .projects, .skills, .about {
-  transition: color 0.3s ease; /* Aplica la transición al color en 0.3 segundos */
-}
-.hero:hover {
-  color: rgb(218, 118, 209);
+    transition: color 0.3s ease; 
   }
+
+  .hero:hover {
+    color: rgb(218, 118, 209);
+    }
 
   .projects:hover {
-  color: rgba(63,94,251,1);
+    color: rgba(63,94,251,1);
   }
 
-   .skills:hover {
-  color: rgba(252,70,107,1);
+  .skills:hover {
+    color: rgba(252,70,107,1);
   }
 
-   .about:hover {
-  color:  rgb(236, 234, 119);
+  .about:hover {
+    color:  rgb(236, 234, 119);
   }
-
 `;
 
-// Botón de cerrar (la cruz)
 export const CloseButton = styled.div`
   position: absolute;
   top: 20px;

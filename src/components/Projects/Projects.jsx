@@ -5,7 +5,7 @@ const Projects = () => {
     const [showDescriptionIndex, setShowDescriptionIndex] = useState(null);  
 
     const toggleDescription = (index) => {
-        setShowDescriptionIndex(prevIndex => prevIndex === index ? null : index);  // Si está abierto, cerramos; si no, lo abrimos
+        setShowDescriptionIndex(prevIndex => prevIndex === index ? null : index);  
     };
 
     const projects = [

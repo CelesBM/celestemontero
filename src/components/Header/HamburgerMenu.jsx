@@ -19,45 +19,50 @@ const HamburgerMenu = () => {
           <Menu>
             <CloseButton onClick={toggleMenu}></CloseButton>
             <ul>
-            <li className="hero">
+              <li className="hero">
                 <Link 
-                  to="hero" // Coincide con el id de la sección "Projects"
+                  to="hero" 
                   smooth={true}  // Activar desplazamiento suave
-                  duration={900} // Duración de la transición (500ms)
-                  offset={-70}   // Ajuste de desplazamiento (si tienes un header fijo)
-                  onClick={toggleMenu} // Cierra el menú al hacer clic
+                  duration={900} // Duración de la transición 
+                  offset={-70}   // Ajuste de desplazamiento
+                  onClick={toggleMenu} 
                 >
                   Home
-                </Link></li>
+                </Link>
+              </li>
               <li className="projects">
                 <Link 
-                  to="projects" // Coincide con el id de la sección "Projects"
-                  smooth={true}  // Activar desplazamiento suave
-                  duration={900} // Duración de la transición (500ms)
-                  offset={-70}   // Ajuste de desplazamiento (si tienes un header fijo)
-                  onClick={toggleMenu} // Cierra el menú al hacer clic
+                  to="projects" 
+                  smooth={true}  
+                  duration={900} 
+                  offset={-70}   
+                  onClick={toggleMenu} 
                 >
                   Proyectos
-                </Link></li>
+                </Link>
+              </li>
               <li className="skills"> 
                 <Link 
-                  to="skills" // Coincide con el id de la sección "Skills"
+                  to="skills" 
                   smooth={true}
                   duration={3000}
                   offset={-70}
-                  onClick={toggleMenu} // Cierra el menú al hacer clic
+                  onClick={toggleMenu} 
                 >
                   Tecnologías
-                </Link></li>
-              <li className="about">  <Link 
-                  to="about" // Coincide con el id de la sección "About"
+                </Link>
+              </li>
+              <li className="about">  
+                <Link 
+                  to="about" 
                   smooth={true}
                   duration={3500}
                   offset={-70}
-                  onClick={toggleMenu} // Cierra el menú al hacer clic
+                  onClick={toggleMenu} 
                 >
                   Sobre mí
-                </Link></li>
+                </Link>
+              </li>
             </ul>
           </Menu>
         </>

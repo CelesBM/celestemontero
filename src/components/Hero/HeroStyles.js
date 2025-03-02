@@ -1,13 +1,11 @@
 import styled, { keyframes } from "styled-components";
 import heroimg from "/hero.png";
 
-/* Animación para texto */
 export const fadeIn = keyframes`
   0% { opacity: 0; }
   100% { opacity: 1; }
 `;
 
-/* Animación para movimiento desde abajo */
 export const slideUp = keyframes`
   0% { 
     opacity: 0;
@@ -19,30 +17,16 @@ export const slideUp = keyframes`
   }
 `;
 
-/* Animación para saludo */
 export const helloAnimation = keyframes`
-  0% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(10deg);
-  }
+  0% { transform: rotate(10deg); }
+  50% { transform: rotate(30deg); }
+  100% { transform: rotate(10deg); }
 `;
 
-/* Animación para flecha */
 const moveDown = keyframes`
-  0% {
-    transform: translateY(0);  
-  }
-  50% {
-    transform: translateY(10px);  
-  }
-  100% {
-    transform: translateY(0);  
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
 `;
 
 export const Container = styled.section`
@@ -84,7 +68,7 @@ export const Container = styled.section`
     -webkit-text-stroke: 0.2px #3f5efb;
     text-align: center;
     opacity: 0;
-    animation: ${slideUp} 1.5s ease-out forwards 2.5s; /* Aparece desde abajo con delay */
+    animation: ${slideUp} 1.5s ease-out forwards 2.5s; 
   }
 
   @media(min-width: 500px){
@@ -93,12 +77,12 @@ export const Container = styled.section`
 
   @media(min-width: 600px){
     gap: 25px;
-    & p{
-      font-size: 22px;
-    }
-    & h1{
-      font-size: 60px;
-    }
+      & p{
+        font-size: 22px;
+      }
+      & h1{
+        font-size: 60px;
+      }
   }
 
   @media(min-width: 768px){
@@ -119,13 +103,12 @@ export const Container = styled.section`
 
   @media(min-width: 1400px){
     padding: 20px 200px;
-    & p{
-      font-size: 25px;
-      
-    }
-    & h1{
-      font-size: 68px;
-    }
+      & p{
+        font-size: 25px;
+      }
+      & h1{
+        font-size: 68px;
+      }
   }
 
   @media(min-width: 1600px){
@@ -145,10 +128,9 @@ export const HelloContainer = styled.div`
   opacity: 0;
   animation: ${fadeIn} 2s ease-out forwards 0.5;
 
-    @media(min-width: 1400px){
-    margin-top: 140px;
-      
-    }
+  @media(min-width: 1400px){
+    margin-top: 140px;    
+  }
 
   & h2 {
     color: white;
@@ -219,7 +201,6 @@ export const SocialMediaContainer = styled.div`
     & a{
       padding: 12px;
     }
-
     & img{
       width: 45px;
     }

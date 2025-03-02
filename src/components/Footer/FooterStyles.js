@@ -22,24 +22,24 @@ export const Container = styled.section`;
   }
 
   @media(min-width: 500px){
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
   }
 
   @media(min-width: 800px){
-  padding: 30px 40px;
+    padding: 30px 40px;
   }
 `;
 
 export const ContainerInfo = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 
-& h5 {
+  & h5 {
    font-size: 25px;
    font-weight: bold;
    background: linear-gradient(270deg, rgba(246,242,54,1) 0%, rgba(252,70,107,1) 35%, rgba(63,94,251,1) 100%);
@@ -50,66 +50,66 @@ align-items: center;
   }
 
   @media(min-width: 800px){
-  & h5{
-  font-size: 30px;
-  }
+    & h5{
+      font-size: 30px;
+    }
   }
 
   & p {
-  font-size: 18px;
-  color: white;
+    font-size: 18px;
+    color: white;
   }
 
   @media(min-width: 800px){
-  & p{
-  font-size: 22px;
-  }
+    & p{
+      font-size: 22px;
+    }
   }
 `;
+
 export const ContainerSocialMedia = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-content: center;
-align-items: center;
-gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 60px;
 
-@media(min-width: 450px){
-gap: 90px;
-}
+  @media(min-width: 450px){
+    gap: 90px;
+  }
 
-@media(min-width: 500px){
-flex-direction: column;
-gap: 20px;
-}
+  @media(min-width: 500px){
+    flex-direction: column;
+    gap: 20px;
+  }
 
-@media(min-width: 600px){
-flex-direction: row;
-gap: 40px;
-}
-
+  @media(min-width: 600px){
+    flex-direction: row;
+    gap: 40px;
+  }
 
 `;
 
 export const SocialMedia = styled.div`
-display: flex;
-justify-content: center;
-align-content: center;
-align-items: center;
+  display: flex;
+  j ustify-content: center;
+  align-content: center;
+  align-items: center;
 
-& img{
-width: 45px;
-border-radius: 8px;
-transition: transform 0.3s ease-in-out;
-}
+  & img{
+    width: 45px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
 
-& img:hover{
-transform: scale(1.1);
-}
+  & img:hover{
+    transform: scale(1.1);
+  }
 
   @media(min-width: 800px){
-  & img{
-  width: 55px;;
-  }
+    & img{
+      width: 55px;;
+    }
   }
 `;

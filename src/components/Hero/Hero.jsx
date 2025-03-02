@@ -9,6 +9,11 @@ const Hero = () => {
     setIsLoading(false);
   };
 
+  const handleDownloadCV = () => {
+    const downloadCV = "/curriculum.pdf";
+    window.open(downloadCV);
+  };
+
   return (
     <Container id="hero">
       <HelloContainer>
@@ -44,7 +49,7 @@ const Hero = () => {
         </a>
       </SocialMediaContainer>
       <CurriculumContainer>
-        <button>Descargar CV</button>
+        <button onClick={handleDownloadCV}>Descargar CV</button>
       </CurriculumContainer>
       <a href="#projects">
         <Arrow>{'︾'}</Arrow>

@@ -134,8 +134,7 @@ gap: 100px;
 & img {
 border-radius: 50rem;
 width: 250px;
-    animation: ${lightAnimation} 2s infinite linear; /* Animación que crea el efecto de luz alrededor de la imagen */
-}
+  animation: ${lightAnimation} 1.5s infinite linear;}
 
 @media(min-width: 1075px){
 & img {

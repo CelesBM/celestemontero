@@ -3,7 +3,7 @@ import { Container, Presentation, SkillsContainer } from "./SkillsStyles";
 const Skills = () => {
     return(
         <>
-        <Container>
+        <Container id="skills">
             <Presentation>
                 <h3>Tecnologías</h3>
                 <p>Mi especialización es fullstack, con sólidos conocimientos en React, Javascript, Typescript, Node.js, bases de datos relacionales (PostgreSQL, MySQL) y no relacionales (MongoDB), implementando soluciones eficientes y escalables. Disfruto transformar ideas complejas en aplicaciones web funcionales y fáciles de usar.<br/>

@@ -60,6 +60,7 @@ export const Container = styled.section`
   opacity: 0;
   animation: ${fadeIn} 0s ease-out forwards;
 
+
   & h1 {
     font-family: "Archivo Black", serif;
     font-weight: bold;
@@ -120,6 +121,7 @@ export const Container = styled.section`
     padding: 20px 200px;
     & p{
       font-size: 25px;
+      
     }
     & h1{
       font-size: 68px;
@@ -142,6 +144,11 @@ export const HelloContainer = styled.div`
   align-items: center;
   opacity: 0;
   animation: ${fadeIn} 2s ease-out forwards 0.5;
+
+    @media(min-width: 1400px){
+    margin-top: 140px;
+      
+    }
 
   & h2 {
     color: white;

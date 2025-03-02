@@ -3,7 +3,7 @@ import { Container, Presentation, AboutContainer } from "./AboutStyles";
 const About = () => {
     return(
         <>
-        <Container>
+        <Container id="about">
             <Presentation>
                 <h3>Un poco sobre mí...</h3>
             </Presentation>
